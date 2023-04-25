@@ -1,3 +1,7 @@
+.btn {
+	border-radius: var(--site-radius);
+}
+
 .navbar-toggler:focus,
 a:focus,
 input:focus,
@@ -105,6 +109,7 @@ p {
 	line-height: 26px;
 	color: #6a7c92;
 	margin: 0px;
+	color: var(--text-color);
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -143,8 +148,20 @@ p {
 	font-weight: 600;
 }
 
+.alert {
+	border-radius: var(--site-radius);
+}
+
 .alert h4 {
 	margin-bottom: 10px;
+}
+
+.alert-info p {
+	color: #055160 !important;
+}
+
+.alert-warning p {
+	color: #664d03;
 }
 
 .page-404-content h2 {
@@ -252,6 +269,7 @@ p {
 	line-height: 55px;
 	font-weight: 600;
 	margin-bottom: 15px;
+	color: var(--site-color);
 }
 
 @media (max-width: 767px) {
@@ -416,4 +434,22 @@ p {
 	to {
 		transform: rotate(-130deg);
 	}
+}
+
+a {
+	color: var(--site-color);
+}
+
+.client-logo-img {
+	border-radius: var(--site-radius);
+}
+
+.fsite-title {
+	color: var(--site-color);
+	margin-bottom: 100px;
+}
+
+a:hover,
+h4 a:hover {
+	color: var(--site-color);
 }

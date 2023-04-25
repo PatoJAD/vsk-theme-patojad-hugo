@@ -44,8 +44,9 @@
 	font-weight: bold;
 	font-size: 50px;
 	line-height: 65px;
-	color: (--text-title);
 	margin-bottom: 25px;
+	color: var(--site-color);
+	margin-bottom: var(--a-color-2);
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px),
@@ -182,6 +183,7 @@
 	width: 100%;
 	opacity: 0.3;
 	transition: all 0.3s ease-out 0s;
+	height: 200px;
 }
 
 .client-logo-section
@@ -195,9 +197,9 @@
 .box-style {
 	padding: 40px 30px;
 	border: 1px solid var(--site-color);
-	border-radius: 10px;
 	margin-bottom: 30px;
 	transition: all 0.3s ease-out 0s;
+	border-radius: var(--site-radius);
 }
 
 .box-style:hover {
@@ -207,10 +209,7 @@
 .box-style:hover .box-icon-style {
 	color: #fff;
 	border-color: transparent;
-	background: linear-gradient(
-		var(--site-color) 0%,
-		rgba(255, 255, 255, 0.2) 100%
-	);
+	background: var(--site-color);
 }
 
 .box-style:hover .box-icon-style::after {

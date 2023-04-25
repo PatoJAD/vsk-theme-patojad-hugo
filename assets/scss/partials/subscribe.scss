@@ -41,6 +41,25 @@
 	right: 5px;
 }
 
+.subscribe-section a {
+	border-radius: 50px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+	border: none;
+	background: linear-gradient(
+		to left,
+		var(--site-color) 0%,
+		rgba(255, 255, 255, 0.2) 50.39%,
+		var(--site-color) 100%
+	);
+	background-size: 200%;
+	transition: all 0.3s ease-out 0s;
+	padding: 30px 120px;
+	top: 5px;
+	right: 5px;
+}
+
 .subscribe-section .subscribe-form button:hover {
 	background-position: right center;
 }

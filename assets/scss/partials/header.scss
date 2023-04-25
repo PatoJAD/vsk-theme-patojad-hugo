@@ -7,6 +7,7 @@
 	z-index: 99;
 	transition: all 0.3s ease-out 0s;
 	padding: 0;
+	background-color: var(--bg-site-g) !important;
 }
 
 .navbar-area.header-3 {
@@ -18,7 +19,7 @@
 	z-index: 99;
 	box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
 	transition: all 0.3s ease-out 0s;
-	background: var(--bg-site-g);
+	background: var(--bg-site);
 	padding: 0px 0;
 }
 
@@ -109,7 +110,7 @@
 
 .navbar-nav .nav-item a {
 	font-size: 16px;
-	color: (--text-title);
+	color: var(--a-color-2);
 	transition: all 0.3s ease-out 0s;
 	position: relative;
 	padding: 20px;
@@ -310,4 +311,11 @@
 	position: absolute;
 	right: 25px;
 	top: 17px;
+}
+
+.logo {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	color: var(--site-color);
+	fill: var(--site-color);
 }

@@ -28,7 +28,7 @@
 }
 
 .team-section .single-team {
-	border-radius: 10px;
+	border-radius: var(--site-radius);
 	background: var(--bg-site-g);
 	border: 1px solid var(--site-color);
 	overflow: hidden;
