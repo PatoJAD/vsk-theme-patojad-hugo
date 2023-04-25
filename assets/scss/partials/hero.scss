@@ -209,7 +209,8 @@
 .box-style:hover .box-icon-style {
 	color: #fff;
 	border-color: transparent;
-	background: var(--site-color);
+	background: var(--site-gradient);
+	border: 0px;
 }
 
 .box-style:hover .box-icon-style::after {
@@ -223,7 +224,7 @@
 	border-radius: 50%;
 	margin-bottom: 25px;
 	background: var(--bg-site-g);
-	border: 2px solid var(--site-color);
+	border: 1px solid var(--site-color);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -242,10 +243,7 @@
 	position: absolute;
 	opacity: 0;
 	visibility: hidden;
-	background: linear-gradient(
-		var(--site-color) 0%,
-		rgba(255, 255, 255, 0.2) 100%
-	);
+	background: var(--site-gradient);
 	transition: all 0.3s ease-out 0s;
 	z-index: -1;
 	border-radius: 50%;

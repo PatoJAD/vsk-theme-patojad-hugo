@@ -196,22 +196,23 @@ p {
 	overflow: hidden;
 	margin-top: 20px;
 	margin-bottom: 50px;
-}
 
-.theme-btn:hover,
-.theme-btn:focus {
-	background-position: right center;
-	color: #fff;
-	box-shadow: 0px 0px 30px var(--site-color);
-}
+	&:hover,
+	&:focus {
+		background-position: right center;
+		color: #fff;
+		box-shadow: 0px 0px 30px var(--site-color);
+		background: var(--site-gradient);
+	}
 
-.theme-btn.border-btn {
-	padding: 14px 40px;
-	background: transparent;
-	border: 1.5px solid #3763eb;
-	color: #6a7c92;
-	font-size: 18px;
-	box-shadow: none;
+	&.border-btn {
+		padding: 14px 40px;
+		background: transparent;
+		border: 1.5px solid #3763eb;
+		color: #6a7c92;
+		font-size: 18px;
+		box-shadow: none;
+	}
 }
 
 .scroll-top {

@@ -28,12 +28,7 @@
 
 .pricing-section .pricing-btn ul li.nav-item a.active {
 	color: #fff;
-	background: linear-gradient(
-		to left,
-		var(--site-color) 0%,
-		rgba(255, 255, 255, 0.2) 50.39%,
-		var(--site-color) 100%
-	);
+	background: var(--site-gradient);
 	background-size: 200%;
 	transition: all 0.3s ease-out 0s;
 }

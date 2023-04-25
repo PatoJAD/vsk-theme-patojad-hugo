@@ -51,11 +51,7 @@
 .about-section .about-img-wrapper .about-experience {
 	width: 300px;
 	border-radius: 27px;
-	background: linear-gradient(
-		to top left,
-		var(--site-color) 0%,
-		rgba(255, 255, 255, 0.2) 100%
-	);
+	background: var(--site-gradient);
 	border: 5px solid #eff2f9;
 	padding: 40px 20px;
 	position: absolute;
@@ -212,10 +208,7 @@
 }
 
 .time-line .single-timeline:hover .box-icon-style {
-	background: linear-gradient(
-		var(--site-color) 0%,
-		rgba(255, 255, 255, 0.2) 100%
-	);
+	background: var(--site-gradient);
 	color: #fff;
 	border-color: transparent;
 }

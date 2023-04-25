@@ -69,10 +69,10 @@
 
 .footer .copyright-area p a {
 	color: #6a7c92;
-}
 
-.footer .copyright-area p a:hover {
-	color: var(--site-color);
+	&:hover {
+		color: var(--site-color);
+	}
 }
 
 @media (max-width: 767px) {
@@ -107,6 +107,11 @@
 	margin-right: 15px;
 	background: var(--bg-site-3);
 	color: var(--a-color-2);
+
+	&:hover {
+		background: var(--site-gradient);
+		color: #fff;
+	}
 }
 
 @media (max-width: 767px) {
@@ -116,28 +121,27 @@
 	}
 }
 
-.footer-social-links ul li a:hover {
-	background: var(--site-color);
-	color: #fff;
-}
-
 .list-group {
 	border-radius: var(--site-radius);
 }
 
 .list-group-item {
-	background-color: var(--bg-site-3);
-}
+	background: var(--bg-site-3);
 
-.list-group-item:hover {
-	border-color: var(--site-color);
+	&:hover {
+		background: var(--site-gradient);
+	}
 }
 
 .list-group-item a {
 	color: var(--a-color-2);
+
+	&:hover {
+		color: #fff;
+	}
 }
 
 .scroll-top {
-	background: var(--site-color);
+	background: var(--site-gradient);
 	border-radius: var(--site-radius);
 }

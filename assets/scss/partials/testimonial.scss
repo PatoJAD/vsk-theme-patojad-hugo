@@ -152,11 +152,7 @@
 }
 
 .portfolio-section .portfolio-btn-wrapper button.active {
-	background-image: linear-gradient(
-		to right,
-		var(--site-color) 0%,
-		rgba(255, 255, 255, 0.2) 100%
-	);
+	background-image: var(--site-gradient);
 	color: #fff;
 }
 
@@ -204,10 +200,7 @@
 	left: 0;
 	top: 0;
 	border-radius: 10px;
-	background: linear-gradient(
-		rgba(55, 99, 235, 0.94) 0%,
-		rgba(111, 88, 232, 0.94) 100%
-	);
+	background: var(--site-gradient);
 	padding: 35px;
 	display: flex;
 	justify-content: center;
