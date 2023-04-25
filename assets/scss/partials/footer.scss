@@ -130,15 +130,15 @@
 
 	&:hover {
 		background: var(--site-gradient);
+
+		a {
+			color: #fff;
+		}
 	}
 }
 
 .list-group-item a {
 	color: var(--a-color-2);
-
-	&:hover {
-		color: #fff;
-	}
 }
 
 .scroll-top {
