@@ -16,53 +16,6 @@ Index Of css
 13. Footer CSS
 
 /*===========================
-    05. Service CSS
-===========================*/
-.service-section .service-box-style-2 {
-	padding: 0;
-	text-align: center;
-}
-
-.service-section .service-box-style-2 .service-thumbnail img {
-	width: 100%;
-	border-radius: 10px 10px 0 0;
-}
-
-.service-section .service-box-style-2 .box-icon-style {
-	margin-left: auto;
-	margin-right: auto;
-	width: 54px;
-	height: 54px;
-	border: 2px solid #fff;
-	font-size: 25px;
-	margin-top: -27px;
-	background: var(--bg-site-g);
-	position: relative;
-	z-index: 9;
-}
-
-.service-section .service-box-style-2 .box-icon-style i {
-	color: transparent;
-	-webkit-background-clip: text;
-	-ms-background-clip: text;
-	background-clip: text;
-	background-image: linear-gradient(#3763eb 0%, #6f58e8 100%);
-	transition: all 0.3s ease-out 0s;
-}
-
-.service-section .service-box-style-2:hover .box-icon-style {
-	background: linear-gradient(#3763eb 0%, #6f58e8 100%);
-}
-
-.service-section .service-box-style-2:hover .box-icon-style i {
-	color: #fff;
-}
-
-.service-section .service-box-style-2 .box-content-style {
-	padding: 0 30px 35px;
-}
-
-/*===========================
     06. Process CSS
 ===========================*/
 .process-section .process-img-wrapper {
