@@ -1,0 +1,121 @@
+.footer {
+	position: relative;
+	z-index: 2;
+	background: var(--bg-site-2);
+}
+
+.footer .footer-widget .footer-desc {
+	line-height: 30px;
+}
+
+.footer .footer-widget h4 {
+	margin-bottom: 35px;
+	font-weight: 500;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.footer .footer-widget h4 {
+		font-size: 22px;
+	}
+}
+
+.footer .footer-widget ul.footer-links li a {
+	color: #6a7c92;
+	display: block;
+	line-height: 35px;
+	transition: all 0.3s;
+}
+
+.footer .footer-widget ul.footer-links li a:hover {
+	color: var(--site-color);
+}
+
+.footer .footer-widget ul {
+	padding-left: 20px;
+}
+
+.footer .footer-widget ul li {
+	list-style: disc;
+}
+
+.footer .footer-widget .footer-contact li p {
+	line-height: 35px;
+}
+
+.footer .copyright-area {
+	border-top: 2px solid rgba(106, 124, 146, 0.44);
+	padding: 25px 0;
+	font-size: 16px;
+	position: relative;
+	z-index: 2;
+}
+
+.footer .copyright-area p {
+	text-align: right;
+}
+
+@media (max-width: 767px) {
+	.footer .copyright-area p {
+		font-size: 14px;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.footer .copyright-area p {
+		font-size: 15px;
+	}
+}
+
+.footer .copyright-area p a {
+	color: #6a7c92;
+}
+
+.footer .copyright-area p a:hover {
+	color: var(--site-color);
+}
+
+@media (max-width: 767px) {
+	.footer-social-links {
+		margin-bottom: 15px;
+	}
+}
+
+.footer-social-links ul {
+	justify-content: flex-start;
+}
+
+@media (max-width: 767px) {
+	.footer-social-links ul {
+		justify-content: center;
+	}
+}
+
+.footer-social-links ul li {
+	display: inline-block;
+}
+
+.footer-social-links ul li a {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 45px;
+	background: rgba(106, 124, 146, 0.1);
+	display: block;
+	font-size: 18px;
+	color: #6a7c92;
+	margin-right: 15px;
+}
+
+@media (max-width: 767px) {
+	.footer-social-links ul li a {
+		padding: 0 7px;
+		margin-right: 10px;
+	}
+}
+
+.footer-social-links ul li a:hover {
+	background: linear-gradient(var(--site-color) 0%, #6f58e8 100%);
+	color: #fff;
+}
