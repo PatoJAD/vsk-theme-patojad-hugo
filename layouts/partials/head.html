@@ -11,26 +11,15 @@
 		property="og:description" />
 
 	<!-- Keywords -->
-	{{ with .Params.Keywords }} <meta name="keywords" content="{{ delimit . ", "
-	}}"> {{ end }}
+	{{ with .Params.Keywords }}
+	<meta name="keywords" content='{{ delimit . ", "}}' />
+	{{ end }}
 
 	<!-- Titulo -->
 	{{- $title := partialCached "data/title" . .RelPermalink -}}
 	<title>{{ $title }}</title>
 
 	<meta name="robots" content="index, follow" />
-
-	<meta name="author" content="PatoJAD" />
-
-	<meta content="@PatoJADOficial" name="twitter:creator" />
-	<meta
-		property="og:url"
-		content="https://patojad.com.ar{{ .RelPermalink }}" />
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content="{{ .Title }}" />
-	<meta property="og:image" content="{{ .Params.img }}" />
-	<meta property="og:locale" content="es-ES" />
-	<meta property="fb:pages" content="268937743974375" />
 
 	<!-- Google Search Meta -->
 	<meta
