@@ -16,56 +16,6 @@ Index Of css
 13. Footer CSS
 
 /*===========================
-    10. Subscribe CSS
-===========================*/
-.subscribe-section {
-	position: relative;
-}
-
-.subscribe-section .subscribe-form {
-	position: relative;
-}
-
-.subscribe-section .subscribe-form input {
-	border: 2px solid transparent;
-	border-radius: 50px;
-	width: 100%;
-	font-size: 16px;
-	padding: 18px 30px;
-	background: var(--bg-site-g);
-	transition: all 0.3s ease-out 0s;
-}
-
-.subscribe-section .subscribe-form input:focus {
-	box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
-}
-
-.subscribe-section .subscribe-form button {
-	border-radius: 50px;
-	color: #fff;
-	font-size: 18px;
-	font-weight: 700;
-	border: none;
-	background: linear-gradient(
-		to left,
-		#3763eb 0%,
-		#6f58e8 50.39%,
-		#3763eb 100%
-	);
-	background-size: 200%;
-	transition: all 0.3s ease-out 0s;
-	position: absolute;
-	height: 54px;
-	width: 54px;
-	top: 5px;
-	right: 5px;
-}
-
-.subscribe-section .subscribe-form button:hover {
-	background-position: right center;
-}
-
-/*===========================
     11. Blog CSS
 ===========================*/
 .blog-section .single-blog {
