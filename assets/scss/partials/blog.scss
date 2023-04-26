@@ -364,9 +364,18 @@
 						margin-bottom: 15px;
 						color: #6a7c92;
 
+						.badge {
+							background: var(--site-gradient);
+						}
+
 						&:hover {
 							background: var(--site-gradient);
 							color: #fff;
+
+							.badge {
+								background: var(--bg-site-2);
+								color: #6a7c92;
+							}
 						}
 					}
 				}

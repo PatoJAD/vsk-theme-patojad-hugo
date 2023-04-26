@@ -1,0 +1,17 @@
+{{- $limit := default 6 .Params.limit -}}
+<div class="sidebar-box tags-box mb-30 text-center">
+	<h4>Tags Populares</h4>
+	<ul>
+		{{ range first $limit .Site.Taxonomies.tags.ByCount }}
+		<li>
+			<a class="position-relative" href="{{ .Page.RelPermalink }}">
+				{{ .Page.Title }}
+				<span
+					class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+					{{ .Count }}
+				</span>
+			</a>
+		</li>
+		{{ end }}
+	</ul>
+</div>
