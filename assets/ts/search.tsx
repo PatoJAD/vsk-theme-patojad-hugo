@@ -43,14 +43,12 @@ class Search {
 	private form: HTMLFormElement;
 	private input: HTMLInputElement;
 	private list: HTMLDivElement;
-	private resultTitle: HTMLHeadElement;
 	private resultTitleTemplate: string;
 
-	constructor({ form, input, list, resultTitle, resultTitleTemplate }) {
+	constructor({ form, input, list, resultTitleTemplate }) {
 		this.form = form;
 		this.input = input;
 		this.list = list;
-		this.resultTitle = resultTitle;
 		this.resultTitleTemplate = resultTitleTemplate;
 
 		this.handleQueryString();
@@ -283,7 +281,6 @@ class Search {
 
 	private clear() {
 		this.list.innerHTML = '';
-		this.resultTitle.innerText = '';
 	}
 
 	private bindQueryStringChange() {
@@ -322,27 +319,30 @@ class Search {
 
 	public static render(item: pageData) {
 		return (
-			<article>
-				<a href={item.permalink}>
-					<div class='article-details'>
-						<h2
-							class='article-title'
-							dangerouslySetInnerHTML={{
-								__html: item.title,
-							}}></h2>
-						<section
-							class='article-preview'
-							dangerouslySetInnerHTML={{
-								__html: item.preview,
-							}}></section>
+			<div
+				class='single-blog blog-style-2 mb-60 wow fadeInUp'
+				data-wow-delay='.2s'
+				style='visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;'>
+				<div class='blog-img'>
+					<a href={item.permalink}>
+						<img alt={item.title} src={item.image} loading='lazy' />
+					</a>
+				</div>
+				<div class='blog-content'>
+					<h4>
+						<a href={item.permalink}>{item.title}</a>
+					</h4>
+					<p
+						dangerouslySetInnerHTML={{
+							__html: item.preview,
+						}}></p>
+					<div class='blog-meta'>
+						<a href={item.permalink} class='read-more-btn'>
+							Leer mas <i class='fa fa-arrow-right'></i>
+						</a>
 					</div>
-					{item.image && (
-						<div class='article-image'>
-							<img src={item.image} loading='lazy' />
-						</div>
-					)}
-				</a>
-			</article>
+				</div>
+			</div>
 		);
 	}
 }
@@ -361,16 +361,12 @@ window.addEventListener('load', () => {
 			searchInput = searchForm.querySelector('input') as HTMLInputElement,
 			searchResultList = document.querySelector(
 				'.search-result--list'
-			) as HTMLDivElement,
-			searchResultTitle = document.querySelector(
-				'.search-result--title'
-			) as HTMLHeadingElement;
+			) as HTMLDivElement;
 
 		new Search({
 			form: searchForm,
 			input: searchInput,
 			list: searchResultList,
-			resultTitle: searchResultTitle,
 			resultTitleTemplate: window.searchResultTitleTemplate,
 		});
 	}, 0);
