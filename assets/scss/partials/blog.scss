@@ -16,8 +16,7 @@
 
 	.single-blog {
 		border-radius: var(--site-radius);
-		background: var(--bg-site-g);
-		border: 1px solid var(--site-color);
+		background: var(--bg-site-2);
 		transition: all 0.3s ease-out 0s;
 
 		&:hover {
@@ -78,8 +77,7 @@
 			.date-meta {
 				position: absolute;
 				bottom: 20px;
-				left: 30px;
-				border: 1px solid var(--site-color);
+				left: 10px;
 				padding: 8px 16px;
 				border-radius: 30px;
 				background: var(--bg-site-g);
@@ -98,6 +96,7 @@
 			h4 {
 				margin-bottom: 25px;
 				font-weight: 600;
+				margin-top: 20px;
 			}
 
 			p {
@@ -141,19 +140,12 @@
 
 		.blog-img {
 			padding-bottom: 0px;
-			margin-bottom: 30px;
-			border-radius: 10px;
-
-			img {
-				border-radius: 10px;
-			}
 		}
 
 		.blog-content {
-			padding: 0;
-
 			h4 {
 				margin-bottom: 18px;
+				margin-top: 30px;
 			}
 
 			.blog-meta {
