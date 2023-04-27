@@ -228,8 +228,7 @@
 .sidebar-wrapper {
 	.sidebar-box {
 		padding: 30px;
-		border: 1px solid var(--site-color);
-		background: var(--bg-site-g);
+		background: var(--bg-site-2);
 		transition: all 0.3s ease-out 0s;
 		border-radius: var(--site-radius);
 
@@ -252,10 +251,7 @@
 
 				input {
 					transition: all 0.3s ease-out 0s;
-
-					&:focus {
-						border-color: var(--site-color);
-					}
+					border: 0px;
 				}
 
 				button {
@@ -359,7 +355,7 @@
 						font-size: 18px;
 						padding: 12px 23px;
 						border-radius: 30px;
-						background: var(--bg-site-2);
+						background: var(--bg-site-g);
 						margin-bottom: 15px;
 						color: #6a7c92;
 
