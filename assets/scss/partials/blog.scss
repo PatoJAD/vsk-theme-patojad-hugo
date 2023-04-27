@@ -265,6 +265,13 @@
 						border-color: var(--site-color);
 					}
 				}
+
+				button {
+					svg {
+						width: 30px;
+						height: 30px;
+					}
+				}
 			}
 		}
 
