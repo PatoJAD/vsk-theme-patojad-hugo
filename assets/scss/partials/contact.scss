@@ -114,7 +114,6 @@
 .contact-form-wrapper {
 	padding: 50px 40px;
 	background: var(--bg-site-g);
-	border: 1px solid var(--site-color);
 	margin-left: 0px;
 	border-radius: 10px;
 	transition: all 0.3s ease-out 0s;
@@ -134,15 +133,20 @@
 
 .comment-form-wrapper .comment-form input,
 .comment-form-wrapper .comment-form textarea,
+.comment-form-wrapper .comment-form select,
 .comment-form-wrapper .contact-form input,
 .comment-form-wrapper .contact-form textarea,
+.comment-form-wrapper .contact-form select,
 .contact-form-wrapper .comment-form input,
 .contact-form-wrapper .comment-form textarea,
+.contact-form-wrapper .comment-form select,
 .contact-form-wrapper .contact-form input,
-.contact-form-wrapper .contact-form textarea {
+.contact-form-wrapper .contact-form textarea,
+.contact-form-wrapper .contact-form select {
 	padding: 18px 25px;
 	border-radius: 30px;
-	border: 1px solid var(--site-color);
+	border: 0px;
+	background: var(--bg-site-2);
 	margin-bottom: 25px;
 	width: 100%;
 	transition: all 0.3s ease-out 0s;
