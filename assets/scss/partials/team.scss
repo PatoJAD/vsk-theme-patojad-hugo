@@ -16,10 +16,10 @@
 
 	.single-team {
 		border-radius: var(--site-radius);
-		background: var(--bg-site-g);
-		border: 1px solid var(--site-color);
+		background: var(--site-gradient);
 		overflow: hidden;
 		transition: all 0.3s ease-out 0s;
+		color: #fff;
 
 		&:hover {
 			box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45);
