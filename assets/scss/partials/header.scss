@@ -106,6 +106,7 @@
 			visibility: hidden;
 			transition: all 0.3s ease-out 0s;
 			padding: 0;
+			border-radius: var(--site-radius);
 
 			&.left-menu {
 				left: -100%;

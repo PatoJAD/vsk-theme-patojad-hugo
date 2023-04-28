@@ -20,53 +20,62 @@
 						class="collapse navbar-collapse sub-menu-bar"
 						id="navbarSupportedContent">
 						<ul id="nav" class="navbar-nav ms-auto">
+							{{ range .Site.Menus.main }} {{if eq
+							.Params.havechildren true }}
 							<li class="nav-item">
-								<a class="page-scroll" title="Inicio" href="/">
-									Inicio
-								</a>
+								<a
+									class="page-scroll dd-menu collapsed"
+									href="javascript:void(0)"
+									data-bs-toggle="collapse"
+									data-bs-target="#{{- .Name -}}"
+									aria-controls="navbarSupportedContent"
+									aria-expanded="false"
+									aria-label="Toggle navigation"
+									>{{- .Name -}}</a
+								>
+								<ul
+									class="sub-menu collapse"
+									id="{{- .Name -}}">
+									{{ range .Params.submenu }}
+									<li class="nav-item">
+										<a
+											title="{{- .name -}}"
+											href="{{ .url | relLangURL }}"
+											{{
+											if
+											eq
+											.newTab
+											true
+											}}target="_blank"
+											{{
+											end
+											}}
+											>{{- .name -}}</a
+										>
+									</li>
+									{{end}}
+								</ul>
 							</li>
+							{{else}}
 							<li class="nav-item">
 								<a
 									class="page-scroll"
-									title="Sobre PatoJAD"
-									href="/sobremi/">
-									Sobre PatoJAD
+									title="{{- .Name -}}"
+									href="{{ .URL | relLangURL }}"
+									{{
+									if
+									eq
+									.Params.newtab
+									true
+									}}target="_blank"
+									{{
+									end
+									}}>
+									<span>{{- .Name -}}</span>
 								</a>
 							</li>
-							<li class="nav-item">
-								<a
-									class="page-scroll"
-									target="_blank"
-									title="Sobre Mi"
-									href="https://joaquindecima.gitlab.io/">
-									Sobre Mi
-								</a>
-							</li>
-							<li class="nav-item">
-								<a
-									class="page-scroll"
-									title="Contacto"
-									href="/contacto">
-									Contacto
-								</a>
-							</li>
-							<li class="nav-item">
-								<a
-									class="page-scroll"
-									title="Agradecimientos"
-									href="/agradecimientos">
-									Agradecimientos
-								</a>
-							</li>
-							<li class="nav-item">
-								<a
-									class="page-scroll"
-									title="Agradecimientos"
-									href="https://community.vasak.net.ar/">
-									Foro
-								</a>
-							</li>
-							{{ partial "helper/colorSchemeToggle" }}
+							{{end}} {{ end }} {{ partial
+							"helper/colorSchemeToggle" }}
 						</ul>
 					</div>
 				</nav>
