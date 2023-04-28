@@ -147,7 +147,7 @@
 					display: block;
 					padding: 10px 15px;
 					font-size: 14px;
-					color: #222;
+					color: var(--text-title);
 					border-top: 1px solid rgba(0, 0, 0, 0.03);
 
 					&:hover {
@@ -168,10 +168,6 @@
 
 			&.active {
 				color: var(--site-color);
-			}
-
-			&.dd-menu {
-				padding-right: 34px;
 			}
 		}
 	}
@@ -220,8 +216,6 @@
 			a {
 				padding: 20px 15px;
 				&.dd-menu {
-					padding-right: 30px;
-
 					&::after {
 						right: 13px;
 					}
