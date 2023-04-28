@@ -469,6 +469,7 @@ blockquote {
 			background: none;
 			padding: 0;
 			display: inline-grid;
+			padding-bottom: 15px;
 
 			&::before {
 				content: attr(data-lang);
