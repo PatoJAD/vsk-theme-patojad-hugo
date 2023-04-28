@@ -46,3 +46,9 @@
 		--text-title: #999;
 	}
 }
+
+@import './highlight/light.scss';
+
+[data-scheme='dark'] {
+	@import './highlight/dark.scss';
+}
