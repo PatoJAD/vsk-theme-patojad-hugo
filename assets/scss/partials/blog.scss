@@ -379,16 +379,6 @@
 	}
 }
 
-/*
-
-code::before {
-	content: attr(data-lang);
-	position: absolute;
-	margin-top: -45px;
-	color: var(--bg-site);
-	margin-left: 30px;
-}*/
-
 blockquote {
 	font-weight: 500;
 	padding: 20px 30px;
@@ -465,7 +455,7 @@ blockquote {
 		display: block;
 		background-color: var(--bg-site-g) !important;
 		color: var(--font-color) !important;
-		//font-family: var(--code-font-family);
+		font-family: var(--code-font-family);
 		line-height: 1.428571429;
 		word-break: break-all;
 		padding: 3px;
@@ -604,10 +594,9 @@ blockquote {
 	}
 
 	code {
-		color: var(--code-text-color);
 		background-color: var(--code-background-color);
 		padding: 2px 4px;
-		border-radius: var(--tag-border-radius);
+		border-radius: var(--site-radius);
 		font-family: var(--code-font-family);
 		overflow-x: auto;
 	}

@@ -1,3 +1,5 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css);
+
 :root {
 	--bg-site-g: #eff2f9;
 	--bg-site: #ddd;
@@ -33,6 +35,8 @@
 	--site-instalacion: #1630be;
 	--site-macos: #818181;
 	--site-windows: #00a1f1;
+
+	--code-font-family: 'Fira Code', monospace;
 
 	&[data-scheme='dark'] {
 		--bg-site-g: #333;
