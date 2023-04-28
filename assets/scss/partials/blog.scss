@@ -379,21 +379,7 @@
 	}
 }
 
-pre {
-	padding: 20px;
-	border-radius: var(--site-radius);
-	margin-top: 10px;
-	margin-bottom: 40px;
-	border-top: 30px solid var(--site-color);
-
-	&::before {
-		font: normal normal normal 14px/1 ForkAwesome;
-		content: '\f121';
-		color: var(--bg-site);
-		position: absolute;
-		margin-top: -41px;
-	}
-}
+/*
 
 code::before {
 	content: attr(data-lang);
@@ -401,7 +387,7 @@ code::before {
 	margin-top: -45px;
 	color: var(--bg-site);
 	margin-left: 30px;
-}
+}*/
 
 blockquote {
 	font-weight: 500;
@@ -439,27 +425,192 @@ blockquote {
 			margin-bottom: 30px;
 		}
 	}
-}
 
-.embed-video {
-	border-radius: var(--site-radius);
-	margin-top: 60px;
-	margin-bottom: 60px;
-}
+	.chroma {
+		.lntable {
+			background: var(--bg-site-g);
+			margin-top: 10px;
 
-iframe {
-	border-radius: var(--site-radius);
-}
+			& > tbody {
+				display: block;
+				width: 100%;
+			}
 
-.blog-content-img {
-	border-radius: var(--site-radius);
-	margin-top: 60px;
-	margin-bottom: 70px;
-}
+			& > tr {
+				display: flex;
+				width: 100%;
+			}
+		}
+		.lntd {
+			vertical-align: top;
+			padding: 0;
+			margin: 0;
+			border: 0;
 
-hr {
-	margin-top: 70px;
-	margin-bottom: 70px;
+			pre {
+				display: block;
+				float: left;
+			}
+
+			&:last-child {
+				pre {
+					display: grid;
+				}
+			}
+		}
+	}
+
+	pre {
+		overflow-x: auto;
+		display: block;
+		background-color: var(--bg-site-g) !important;
+		color: var(--font-color) !important;
+		//font-family: var(--code-font-family);
+		line-height: 1.428571429;
+		word-break: break-all;
+		padding: 3px;
+		//  keep Codeblocks LTR
+		[dir='rtl'] & {
+			direction: ltr;
+		}
+		code {
+			color: unset;
+			border: none;
+			background: none;
+			padding: 0;
+			display: inline-grid;
+
+			&::before {
+				content: attr(data-lang);
+				position: absolute;
+				margin-top: -37px;
+				color: var(--bg-site);
+				margin-left: -20px;
+			}
+		}
+	}
+
+	.highlight {
+		background-color: var(--bg-site-g);
+		position: relative;
+		padding: 20px;
+		border-radius: var(--site-radius);
+		margin-top: 10px;
+		margin-bottom: 40px;
+		border-top: 30px solid var(--site-color);
+		padding-bottom: 0px;
+		padding-top: 0px;
+
+		&::before {
+			font: normal normal normal 14px/1 ForkAwesome;
+			content: '\f121';
+			color: var(--bg-site);
+			position: absolute;
+			margin-top: -21px;
+		}
+
+		&:hover {
+			.copyCodeButton {
+				opacity: 1;
+			}
+		}
+		// keep Codeblocks LTR
+		[dir='rtl'] & {
+			direction: ltr;
+		}
+		pre {
+			margin: initial;
+			padding: 0;
+			margin: 0;
+			width: auto;
+		}
+	}
+
+	.copyCodeButton {
+		position: absolute;
+		top: calc(3px);
+		right: calc(3px);
+		background: var(--site-gradient);
+		border: none;
+		border-radius: var(--site-radius);
+		padding: 8px 16px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 14px;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.table-wrapper {
+		padding: 0 3px;
+		overflow-x: auto;
+		display: block;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+		margin-bottom: 1.5em;
+		font-size: 0.96em;
+
+		tbody {
+			border-color: inherit;
+			border-style: solid;
+			border-width: 0;
+		}
+
+		th,
+		td {
+			text-align: left;
+			padding: 4px 8px 4px 10px !important;
+			border: 0px;
+			max-width: 100%;
+			display: table-cell;
+		}
+
+		td {
+			vertical-align: top;
+		}
+
+		tr:nth-child(even) {
+			background-color: var(--bg-site-g);
+		}
+	}
+
+	.embed-video {
+		border-radius: var(--site-radius);
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+
+	iframe {
+		border-radius: var(--site-radius);
+	}
+
+	.blog-content-img {
+		border-radius: var(--site-radius);
+		margin-top: 60px;
+		margin-bottom: 70px;
+	}
+
+	hr {
+		width: 100px;
+		margin: 40px auto;
+		background: var(--card-text-color-tertiary);
+		height: 2px;
+		border: 0;
+		opacity: 0.55;
+	}
+
+	code {
+		color: var(--code-text-color);
+		background-color: var(--code-background-color);
+		padding: 2px 4px;
+		border-radius: var(--tag-border-radius);
+		font-family: var(--code-font-family);
+		overflow-x: auto;
+	}
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
