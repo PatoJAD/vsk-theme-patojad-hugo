@@ -113,9 +113,9 @@
 .comment-form-wrapper,
 .contact-form-wrapper {
 	padding: 50px 40px;
-	background: var(--bg-site-g);
+	background: var(--bg-site-2);
 	margin-left: 0px;
-	border-radius: 10px;
+	border-radius: var(--site-radius);
 	transition: all 0.3s ease-out 0s;
 }
 
