@@ -1,5 +1,5 @@
 <header class="header bg-white navbar-area">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row align-items-center">
 			<div class="col-lg-12">
 				<nav class="navbar navbar-expand-lg">
@@ -7,19 +7,19 @@
 						{{- partial "logo.html" "54px" -}}
 					</a>
 					<button
-						class="navbar-toggler"
+						class="navbar-toggler ms-auto me-auto"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#navbarSupportedContent"
 						aria-controls="navbarSupportedContent"
 						aria-expanded="false"
 						aria-label="Toggle navigation">
-						<em class="fa fa-bars" aria-hidden="true"></em>
+						{{ partial "helper/icon" "menu" }}
 					</button>
 					<div
 						class="collapse navbar-collapse sub-menu-bar"
 						id="navbarSupportedContent">
-						<ul id="nav" class="navbar-nav ms-auto">
+						<ul id="nav" class="navbar-nav ms-auto me-auto">
 							{{ range .Site.Menus.main }} {{if eq
 							.Params.havechildren true }}
 							<li class="nav-item">
@@ -74,10 +74,10 @@
 									<span>{{- .Name -}}</span>
 								</a>
 							</li>
-							{{end}} {{ end }} {{ partial
-							"helper/colorSchemeToggle" }}
+							{{end}} {{ end }}
 						</ul>
 					</div>
+					{{ partial "helper/colorSchemeToggle" }}
 				</nav>
 			</div>
 		</div>
