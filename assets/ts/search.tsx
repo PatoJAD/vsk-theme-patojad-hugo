@@ -330,7 +330,11 @@ class Search {
 				</div>
 				<div class='blog-content'>
 					<h4>
-						<a href={item.permalink}>{item.title}</a>
+						<a
+							href={item.permalink}
+							dangerouslySetInnerHTML={{
+								__html: item.title,
+							}}></a>
 					</h4>
 					<p
 						dangerouslySetInnerHTML={{
