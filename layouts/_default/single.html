@@ -27,7 +27,8 @@
 						</div>
 					</div>
 
-					{{ $pages := .Site.Pages.ByPublishDate.Reverse }} {{ range
+					{{- partial "post/related-content.html" . -}} {{ $pages :=
+					.Site.Pages.ByPublishDate.Reverse }} {{ range
 					.Params.authors }} {{ range where (where $pages "Type"
 					"authors") ".Params.name" . }}
 
