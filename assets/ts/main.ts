@@ -11,6 +11,7 @@ import createElement from 'ts/createElement';
 import StackColorScheme from 'ts/colorScheme';
 import { setupScrollspy } from 'ts/scrollspy';
 import { setupSmoothAnchors } from 'ts/smoothAnchors';
+import { setNavBarOnScroll, setSideBarOnScroll } from './onScrollElemnts';
 
 let Stack = {
 	init: () => {
@@ -116,3 +117,7 @@ declare global {
 
 window.Stack = Stack;
 window.createElement = createElement;
+window.onscroll = function () {
+	setNavBarOnScroll();
+	setSideBarOnScroll();
+};

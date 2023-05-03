@@ -1,13 +1,3 @@
-window.onscroll = function () {
-	const header_navbar = document.querySelector('.navbar-area');
-	const sticky = header_navbar.offsetTop;
-	if (window.scrollY > sticky) {
-		header_navbar.classList.add('sticky');
-	} else {
-		header_navbar.classList.remove('sticky');
-	}
-};
-
 let navbarToggler = document.querySelector('.navbar-toggler');
 
 navbarToggler.addEventListener('click', function () {
