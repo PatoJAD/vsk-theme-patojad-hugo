@@ -1,22 +1,15 @@
 {{ define "main" }}
 
-<!---->
+
 {{ .Scratch.Set "title" "PatoJAD Community" }}
-<!---->
 {{ .Scratch.Set "description" "Un lugar pensado para vos" }}
-<!---->
-{{ .Scratch.Set "image" "https://i.postimg.cc/fTgK0kDj/image.png" }} {{- partial
-"generic/breadcrumb.html" . -}}
-<!---->
-<!---->
+{{ .Scratch.Set "image" "https://i.postimg.cc/fTgK0kDj/image.png" }}
+{{- partial "generic/breadcrumb.html" . -}}
+
 {{- partial "post/recents.html" . -}}
-<!---->
 {{- partial "generic/friendssite.html" . -}}
-<!---->
 {{- partial "generic/services.html" . -}}
-<!---->
 {{- partial "generic/team.html" . -}}
-<!---->
 {{- partial "generic/community.html" . -}}
-<!---->
+
 {{ end }}
