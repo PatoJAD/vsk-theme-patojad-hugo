@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+{{ .Scratch.Set "title" "404" }}
+{{ .Scratch.Set "description" "Sitio no encontrado" }}
+{{- partial "generic/postbreadcrumb.html" . -}}
+
+<section class="page-404-section pt-130 pb-130">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-404-content text-center">
+                    <h2 class="mb-30">404</h2>
+                    <h4 class="mb-40">¡Pagina no encontrada!</h4>
+                    <a href="/" class="theme-btn">volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}
