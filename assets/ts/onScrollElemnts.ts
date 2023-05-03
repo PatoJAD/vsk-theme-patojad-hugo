@@ -12,17 +12,17 @@ async function setSideBarOnScroll() {
 	// Sidebar Sticky
 	let sidebarContent = document.getElementsByClassName('sidebar-single')[0];
 
-	let scrollTop = window.scrollY;
+	let scrollTop = window.scrollY + 200;
 	let fixHeight =
 		sidebarContent.getBoundingClientRect().height - window.innerHeight;
 
 	if (scrollTop >= fixHeight) {
-		sidebarContent.style.transform = `translateY(-${fixHeight + 50}px)`;
+		sidebarContent.style.top = `100px`;
 		sidebarContent.style.position = 'fixed';
 		sidebarContent.style.paddingRight = '200px';
 		sidebarContent.style.marginRight = '200px';
 	} else {
-		sidebarContent.style.transform = '';
+		sidebarContent.style.top = '';
 		sidebarContent.style.position = '';
 		sidebarContent.style.paddingRight = '';
 		sidebarContent.style.marginRight = '';
