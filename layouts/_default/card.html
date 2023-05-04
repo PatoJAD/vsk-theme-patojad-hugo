@@ -36,8 +36,14 @@
       </div>
       {{ end }}
 
-      <a href="{{ .RelPermalink }}" class="read-more-btn">Leer Más <em class="fa fa-arrow-right"
-          aria-hidden="true"></em></a>
+      <div class="content-card-footer">
+        <time class="me-auto">
+          <em class="fa fa-clock-o" aria-hidden="true"></em> {{ .ReadingTime }} min de lectura
+        </time>
+        <a href="{{ .RelPermalink }}" class="theme-btn ms-auto">
+          Leer Más <em class="fa fa-arrow-right" aria-hidden="true"></em>
+        </a>
+      </div>
     </div>
   </div>
 </div>

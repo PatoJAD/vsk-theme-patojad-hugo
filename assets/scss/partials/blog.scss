@@ -112,6 +112,21 @@
 				}
 			}
 
+			.content-card-footer {
+				display: flex;
+
+				time {
+					margin-top: auto;
+					font-weight: bold;
+					font-size: 16px;
+				}
+
+				.theme-btn {
+					margin: 0;
+					padding: 10px 20px;
+				}
+			}
+
 			.article-category {
 				margin-bottom: 10px;
 
