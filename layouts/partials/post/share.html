@@ -1,0 +1,18 @@
+<div class="share-section">
+    <a class="share fb" href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}&t={{.Title}}"
+        data-action="share/whatsapp/share">
+        <em class="fa fa-facebook"></em> Facebook
+    </a>
+    <a class="share tw" href="http://twitter.com/share?text={{.Params.description}}&url={{.Permalink}}"
+        data-action="share/whatsapp/share">
+        <em class="fa fa-twitter"></em> Twitter
+    </a>
+    <a class="share tw" href="https://t.me/share/url?text={{.Params.description}}&url={{.Permalink}}"
+        data-action="share/whatsapp/share">
+        <em class="fa fa-paper-plane"></em> Telegram
+    </a>
+    <a class="share wp" href="whatsapp://send?text={{.Params.description}}%20{{.Permalink}}"
+        data-action="share/whatsapp/share">
+        <em class="fa fa-whatsapp"></em> WhatsApp
+    </a>
+</div>

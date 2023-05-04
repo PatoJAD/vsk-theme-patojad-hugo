@@ -16,8 +16,55 @@
 							<img src="{{ .Params.img }}" alt="{{ .Title }}" title="{{ .Title }}" />
 						</div>
 						<div class="blog-content">
-							<h1 class="text-center">{{ .Title }}</h1>
+							<div class="head-info row">
+								<div class="col-6">
+									<ul>
+										<li>
+											<span class="date-meta">
+												<em class="fa fa-calendar" aria-hidden="true"></em>
+												{{ $formattedDate := .Date.Format "Friday, March 3, 2006" }}
+												{{ $monthNumber := .Date.Month }} {{ $dayNumber := .Date.Weekday }}
+												{{ if eq site.Language.Lang "es" }}
+												{{ $monthNumber = index site.Data.meses (printf "%d"
+												.Date.Month) }}
+												{{ $dayNumber = index site.Data.dias (printf "%d" .Date.Weekday)
+												}}
+												{{ $formattedDate = delimit (slice $dayNumber (printf "%d" .Date.Day)
+												"de"
+												$monthNumber "de" (printf "%d"
+												.Date.Year)) " "}}
+												{{ end }}
+
+												{{ $formattedDate }}
+											</span>
+										</li>
+										<li>
+											<time>
+												<em class="fa fa-clock-o" aria-hidden="true"></em> {{ .ReadingTime }}
+												min de
+												lectura
+											</time>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6">
+									{{ if .Params.categories }}
+									<div class="article-category">
+										{{ range (.GetTerms "categories") }}
+										<a href="{{ .RelPermalink }}" {{ with .Params.style }}
+											style="background-color: {{ .background }}; color: {{ .color }};" {{ end }}>
+											{{ .LinkTitle }}
+										</a>
+										{{ end }}
+									</div>
+									{{ end }}
+								</div>
+							</div>
+
+							<h1 class="text-center" style="margin-top: 10px;">{{ .Title }}</h1>
 							{{ .Content }}
+
+							{{ partial "post/share.html" . }}
 						</div>
 					</div>
 
