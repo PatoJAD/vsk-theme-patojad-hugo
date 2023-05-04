@@ -1,42 +1,11 @@
 <div class="sidebar-box mb-30">
   <h4>Siguenos en</h4>
   <p class="text-center social">
-    <a href="https://t.me/PatoJADCommunity" target="_blank" class="donate-link">
-      {{ partial "helper/icon" "telegram" }}
+    {{ range .Site.Params.social.main }}
+    <a href="{{ .url }}" alt="{{ .name }}" class="donate-link" target="_blank">
+      {{ partial "helper/icon" .params.icon }}
     </a>
-    <a href="https://www.youtube.com/channel/UCta4Iy4TzMx8Xo0pwpkbWgg" class="donate-link">
-      {{ partial "helper/icon" "youtube" }}
-    </a>
-    <a href="https://www.instagram.com/patojadoficial/" target="_blank" class="donate-link">
-      {{ partial "helper/icon" "instagram" }}
-    </a>
-    <a href="https://mastodon.social/@PatoJAD" target="_blank" class="donate-link">
-      {{ partial "helper/icon" "mastodon" }}
-    </a>
-    <a href="https://t.me/PatoJADBlog" target="_blank" class="donate-link">
-      {{ partial "helper/icon" "bullhorn" }}
-    </a>
-    <a href="https://twitter.com/PatoJADOficial" target="_blank" class="donate-link">
-      {{ partial "helper/icon" "twitter" }}
-    </a>
-    <a href="https://facebook.com/PatoJAD/" target="_blank" class="donate-link">
-      {{ partial "helper/icon" "facebook" }}
-    </a>
-    <a href="https://lbry.tv/@PatoJAD:d" target="_blank" class="donate-link">
-      {{ partial "helper/icon" "lbry" }}
-    </a>
-    <a href="https://steamcommunity.com/id/joaquindecima/" target="_blank" class="donate-link">
-      {{ partial "helper/icon" "steam" }}
-    </a>
-    <a href="https://discord.gg/n8XtgN3" target="_blank" class="donate-link">
-      {{ partial "helper/icon" "discord" }}
-    </a>
-    <a href="https://www.twitch.tv/patojad" target="_blank" class="donate-link">
-      {{ partial "helper/icon" "twitch" }}
-    </a>
-    <a href="https://www.crunchyroll.com/es/user/PatoJAD" target="_blank" class="donate-link">
-      {{ partial "helper/icon" "crunchyroll" }}
-    </a>
+    {{ end }}
   </p>
 
 </div>
