@@ -2,12 +2,16 @@
 
 <div class="sidebar-box catagories-box mb-30">
   <h4>Catagories</h4>
-  <ul>
+  <ul class="text-center">
     {{ range first $limit .Site.Taxonomies.categories.ByCount }}
     <li>
-      <a href="{{ .Page.RelPermalink }}">
-        <span>{{ .Page.Title }}</span>
-        <span class="ms-2">({{ .Count }})</span>
+      <a class="position-relative" href="{{ .Page.RelPermalink }}">
+        {{ if .Page.Params.icon }}
+        {{ partial "helper/icon" .Page.Params.icon }}
+        {{else}}
+        {{ .Page.Title }}
+        {{end}}
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">{{ .Count }}</span>
       </a>
     </li>
     {{ end }}
