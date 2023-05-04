@@ -2,7 +2,7 @@
   <h4>Siguenos en</h4>
   <p class="text-center social">
     {{ range .Site.Params.social.main }}
-    <a href="{{ .url }}" alt="{{ .name }}" class="donate-link" target="_blank">
+    <a href="{{ .url }}" alt="{{ .name }}" class="donate-link" rel="noopener" target="_blank">
       {{ partial "helper/icon" .params.icon }}
     </a>
     {{ end }}
