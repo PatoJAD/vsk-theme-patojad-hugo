@@ -2,10 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-6 col-lg-6 col-md-12">
-				<div
-					class="footer-widget mb-60 wow fadeInLeft"
-					data-wow-delay=".2s"
-					style="
+				<div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s" style="
 						visibility: visible;
 						animation-delay: 0.2s;
 						animation-name: fadeInLeft;
@@ -23,52 +20,34 @@
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 text-center">
-				<div
-					class="footer-widget mb-60 wow fadeInUp"
-					data-wow-delay=".4s"
-					style="
+				<div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s" style="
 						visibility: visible;
 						animation-delay: 0.4s;
 						animation-name: fadeInUp;
 					">
 					<ul class="list-group">
 						<li class="list-group-item">
-							<a
-								href="https://rest.patojad.com.ar/"
-								title="Rest API"
-								target="_blank">
+							<a href="https://rest.patojad.com.ar/" title="Rest API" target="_blank">
 								<span class="label">Rest Client</span>
 							</a>
 						</li>
 						<li class="list-group-item">
-							<a
-								href="https://ytplayer.patojad.com.ar/"
-								title="YTPlayer"
-								target="_blank">
+							<a href="https://ytplayer.patojad.com.ar/" title="YTPlayer" target="_blank">
 								<span class="label">YTPlayer</span>
 							</a>
 						</li>
 						<li class="list-group-item">
-							<a
-								href="https://telegram.patojad.com.ar/"
-								title="Telegram Instancia"
-								target="_blank">
+							<a href="https://telegram.patojad.com.ar/" title="Telegram Instancia" target="_blank">
 								<span class="label">Telegram</span>
 							</a>
 						</li>
 						<li class="list-group-item">
-							<a
-								href="https://jugamos.patojad.com.ar/"
-								title="Countdown"
-								target="_blank">
+							<a href="https://jugamos.patojad.com.ar/" title="Countdown" target="_blank">
 								<span class="label">Jugamos</span>
 							</a>
 						</li>
 						<li class="list-group-item">
-							<a
-								href="https://live.patojad.com.ar/"
-								title="Lives de PatoJAD"
-								target="_blank">
+							<a href="https://live.patojad.com.ar/" title="Lives de PatoJAD" target="_blank">
 								<span class="label">Live PatoJAD</span>
 							</a>
 						</li>
@@ -76,52 +55,34 @@
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 text-center">
-				<div
-					class="footer-widget mb-60 wow fadeInUp"
-					data-wow-delay=".6s"
-					style="
+				<div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".6s" style="
 						visibility: visible;
 						animation-delay: 0.6s;
 						animation-name: fadeInUp;
 					">
 					<ul class="list-group">
 						<li class="list-group-item">
-							<a
-								href="https://compartelibre.patojad.com.ar/"
-								title="Comparte Libre"
-								target="_blank">
+							<a href="https://compartelibre.patojad.com.ar/" title="Comparte Libre" target="_blank">
 								<span class="label">Comparte Libre</span>
 							</a>
 						</li>
 						<li class="list-group-item">
-							<a
-								href="https://pensamientos.patojad.com.ar/"
-								title="Blog Instrospectivo"
-								target="_blank">
+							<a href="https://pensamientos.patojad.com.ar/" title="Blog Instrospectivo" target="_blank">
 								<span class="label">Pensamientos</span>
 							</a>
 						</li>
 						<li class="list-group-item">
-							<a
-								href="https://mediastodon.patojad.com.ar/"
-								title="Mediastodon"
-								target="_blank">
+							<a href="https://mediastodon.patojad.com.ar/" title="Mediastodon" target="_blank">
 								<span class="label">Mediastodon</span>
 							</a>
 						</li>
 						<li class="list-group-item">
-							<a
-								href="https://streamtools.patojad.com.ar/"
-								title="Stream Tools"
-								target="_blank">
+							<a href="https://streamtools.patojad.com.ar/" title="Stream Tools" target="_blank">
 								<span class="label">Stream Tools</span>
 							</a>
 						</li>
 						<li class="list-group-item">
-							<a
-								href="https://qrgenerator.vasak.net.ar/"
-								title="QR Generator"
-								target="_blank">
+							<a href="https://qrgenerator.vasak.net.ar/" title="QR Generator" target="_blank">
 								<span class="label">QR Generator</span>
 							</a>
 						</li>
@@ -134,99 +95,25 @@
 				<div class="col-lg-6 col-md-12">
 					<div class="footer-social-links">
 						<ul class="d-flex">
+							{{ range .Site.Params.footer.social }}
 							<li>
-								<a
-									href="https://t.me/PatoJADCommunity"
-									title="Telegram"
-									target="_blank"
-									rel="noopener">
-									<em
-										class="fa fa-telegram"
-										aria-hidden="true"></em>
+								<a href="{{ .url }}" alt="{{ .name }}" title="{{ .name }}" class="donate-link"
+									rel="noopener" target="_blank">
+									{{ partial "helper/icon" .params.icon }}
 								</a>
 							</li>
-							<li>
-								<a
-									href="https://www.youtube.com/c/PatoJAD"
-									title="Youtube"
-									target="_blank"
-									rel="noopener">
-									<em
-										class="fa fa-youtube"
-										aria-hidden="true"></em>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://facebook.com/PatoJAD/"
-									target="_blank"
-									title="Facebook"
-									rel="noopener">
-									<em
-										class="fa fa-facebook-square"
-										aria-hidden="true"></em>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://www.instagram.com/patojadoficial/"
-									target="_blank"
-									title="Instagram"
-									rel="noopener">
-									<em
-										class="fa fa-instagram"
-										aria-hidden="true"></em>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://twitter.com/PatoJADOficial"
-									target="_blank"
-									title="Twitter"
-									rel="noopener">
-									<em
-										class="fa fa-twitter"
-										aria-hidden="true"></em>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://www.twitch.tv/patojad"
-									target="_blank"
-									title="Twitch"
-									rel="noopener">
-									<em
-										class="fa fa-twitch"
-										aria-hidden="true"></em>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://discord.gg/n8XtgN3"
-									target="_blank"
-									title="Discord"
-									rel="noopener">
-									<em
-										class="fa fa-discord-alt"
-										aria-hidden="true"></em>
-								</a>
-							</li>
+							{{ end }}
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
-					<p
-						class="wow fadeInUp"
-						data-wow-delay=".3s"
-						style="
+					<p class="wow fadeInUp" data-wow-delay=".3s" style="
 							visibility: visible;
 							animation-delay: 0.3s;
 							animation-name: fadeInUp;
 						">
 						Diseño creado por
-						<a href="https://vasak.net.ar" rel="nofollow"
-							>Vasak Group</a
-						>
+						<a href="https://vasak.net.ar" rel="nofollow">Vasak Group</a>
 					</p>
 				</div>
 			</div>
