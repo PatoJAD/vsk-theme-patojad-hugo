@@ -24,6 +24,18 @@
     <div class="blog-content">
       <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
       <p>{{ .Params.description }}</p>
+
+      {{ if .Params.categories }}
+      <div class="article-category">
+        {{ range (.GetTerms "categories") }}
+        <a href="{{ .RelPermalink }}" {{ with .Params.style }}
+          style="background-color: {{ .background }}; color: {{ .color }};" {{ end }}>
+          {{ .LinkTitle }}
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+
       <a href="{{ .RelPermalink }}" class="read-more-btn">Leer Más <em class="fa fa-arrow-right"
           aria-hidden="true"></em></a>
     </div>
