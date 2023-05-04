@@ -112,6 +112,16 @@
 				}
 			}
 
+			.article-category {
+				margin-bottom: 10px;
+
+				a {
+					padding: 5px;
+					border-radius: var(--site-radius);
+					margin-bottom: 3px;
+				}
+			}
+
 			.read-more-btn {
 				display: inline-block;
 				font-size: 18px;
