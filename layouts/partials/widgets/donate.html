@@ -1,17 +1,10 @@
 <div class="sidebar-box tags-box mb-30">
 	<h4 class="text-center">Colabora con el Proyecto</h4>
 	<p class="text-center donate">
-		<a href="https://paypal.me/joaquindecima" class="donate-link" target="_blank">
-			{{ partial "helper/icon" "paypal" }}
+		{{ range .Site.Params.donate.main }}
+		<a href="{{ .url }}" alt="{{ .name }}" class="donate-link" target="_blank">
+			{{ partial "helper/icon" .params.icon }}
 		</a>
-		<a href="https://www.patreon.com/join/joaquindecima?" class="donate-link" target="_blank">
-			{{ partial "helper/icon" "patreon" }}
-		</a>
-		<a href="https://ceneka.net/mp/d/PatoJAD" class="donate-link" target="_blank">
-			{{ partial "helper/icon" "mercadopago" }}
-		</a>
-		<a href="http://buymeacoffee.com/PatoJAD" class="donate-link" target="_blank">
-			{{ partial "helper/icon" "buymeacoffee" }}
-		</a>
+		{{ end }}
 	</p>
 </div>
