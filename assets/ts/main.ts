@@ -119,5 +119,5 @@ window.Stack = Stack;
 window.createElement = createElement;
 window.onscroll = function () {
 	setNavBarOnScroll();
-	setSideBarOnScroll();
+	//setSideBarOnScroll();
 };
