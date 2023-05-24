@@ -1,5 +1,5 @@
-{{- $title := partialCached "data/title" . .RelPermalink -}} {{- $description :=
-partialCached "data/description" . .RelPermalink -}}
+{{- $title := partialCached "data/title" . .RelPermalink -}}
+{{- $description := partialCached "data/description" . .RelPermalink -}}
 
 <!-- OpenGrap tile -->
 <meta property="og:title" content="{{ $title }}" />
@@ -10,9 +10,7 @@ partialCached "data/description" . .RelPermalink -}}
 <!-- OpenGrap site name -->
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <!-- OpenGrap type -->
-<meta
-	property="og:type"
-	content="
+<meta property="og:type" content="
     {{- if .IsPage -}}
         article
     {{- else -}}
@@ -33,19 +31,18 @@ partialCached "data/description" . .RelPermalink -}}
 {{- end -}} {{- end -}}
 
 <!-- OpenGrap page -->
-{{- if .IsPage -}} {{- if not .Date.IsZero -}}
-<meta
-	property="article:published_time"
-	content='{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}' />
-{{- end -}} {{- if not .Lastmod.IsZero -}}
-<meta
-	property="article:modified_time"
-	content='{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}' />
-{{- end -}} {{- else -}} {{- if not .Site.LastChange.IsZero -}}
-<meta
-	property="og:updated_time"
-	content='{{ .Site.LastChange.Format " 2006-01-02T15:04:05-07:00 " | safeHTML }}' />
-{{- end -}} {{- end -}}
+{{- if .IsPage -}}
+{{- if not .Date.IsZero -}}
+<meta property="article:published_time" content='{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}' />
+{{- end -}}
+{{- if not .Lastmod.IsZero -}}
+<meta property="article:modified_time" content='{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}' />
+{{- end -}}
+{{- else -}}
+{{- if not .Site.LastChange.IsZero -}}
+<meta property="og:updated_time" content='{{ .Site.LastChange.Format " 2006-01-02T15:04:05-07:00 " | safeHTML }}' />
+{{- end -}}
+{{- end -}}
 
 <!-- OpenGrap Image-->
 {{ $image := partialCached "helper/image" (dict "Context" . "Type" "opengraph")
@@ -69,10 +66,8 @@ partialCached "data/description" . .RelPermalink -}}
 <meta name="twitter:description" content="{{ $description }}" />
 
 <!-- OpenGrap Twitter card -->
-{{- $image := partialCached "helper/image" (dict "Context" . "Type" "opengraph")
-.RelPermalink "opengraph" -}} {{- if $image.exists -}}
-<meta
-	name="twitter:card"
-	content="{{ default `summary_large_image` .Site.Params.opengraph.twitter.card }}" />
-<meta name="twitter:image" content="{{ absURL $image.permalink }}" />
+{{- if .Params.img -}}
+<meta property="og:image" content="{{ .Params.img }}" />
+<meta name="twitter:card" content="{{ default `summary_large_image` .Site.Params.opengraph.twitter.card }}" />
+<meta name="twitter:image" content="{{ .Params.img }}" />
 {{- end -}}
