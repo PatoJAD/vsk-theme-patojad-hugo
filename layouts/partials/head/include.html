@@ -1,6 +1,9 @@
 {{- $title := partialCached "data/title" . .RelPermalink -}}
 {{- $description := partialCached "data/description" . .RelPermalink -}}
 
+<meta name="keywords"
+    content="{{- range .Params.tags -}}{{ . }}, {{- end -}}informatica,blog,tecnologia,patojad,webmaster,sysadmin,programacion,actualidad" />
+
 <!-- OpenGrap tile -->
 <meta property="og:title" content="{{ $title }}" />
 <!-- OpenGrap description -->
