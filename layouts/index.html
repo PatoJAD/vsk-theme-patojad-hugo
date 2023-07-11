@@ -7,7 +7,9 @@
 {{- partial "generic/breadcrumb.html" . -}}
 
 {{- partial "post/recents.html" . -}}
+{{if .Site.Params.friendsSite.enabled}}
 {{- partial "generic/friendssite.html" . -}}
+{{end}}
 {{- partial "generic/services.html" . -}}
 {{- partial "generic/team.html" . -}}
 {{- partial "generic/community.html" . -}}
