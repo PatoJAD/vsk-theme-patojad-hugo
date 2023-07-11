@@ -1,5 +1,5 @@
 <div class="sidebar-box mb-30">
-  <h4>Siguenos en</h4>
+  <h4>{{ .Site.Params.social.title }}</h4>
   <p class="text-center social">
     {{ range .Site.Params.social.main }}
     <a href="{{ .url }}" alt="{{ .name }}" class="donate-link" rel="noopener" target="_blank">

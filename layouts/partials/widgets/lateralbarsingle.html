@@ -3,7 +3,10 @@
 
 		{{- partial "widgets/search.html" . -}}
 		{{- partial "widgets/toc.html" . -}}
+		<!-- Social -->
+		{{ if .Site.Params.social.enabled }}
 		{{- partial "widgets/socialfollows.html" . -}}
+		{{ end }}
 
 	</div>
 </div>
