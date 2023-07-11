@@ -11,7 +11,9 @@
 		<!-- Tags -->
 		{{- partial "widgets/tags.html" . -}}
 		<!-- Donate -->
+		{{ if .Site.Params.donate.enabled }}
 		{{- partial "widgets/donate.html" . -}}
+		{{ end }}
 		<!-- Social -->
 		{{- partial "widgets/socialfollows.html" . -}}
 	</div>
