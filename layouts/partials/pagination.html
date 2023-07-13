@@ -4,7 +4,7 @@
 		{{ $.Scratch.Set "hasPrevDots" false }} {{ $.Scratch.Set "hasNextDots"
 		false }} {{ range .Paginator.Pagers }} {{ if eq . $.Paginator }}
 		<li>
-			<a href="javascript:void(0)" class="active">
+			<a href="#" class="active">
 				{{- .PageNumber -}}
 			</a>
 		</li>
@@ -14,16 +14,12 @@
 		{{ else }} {{ if and (not ($.Scratch.Get "hasPrevDots")) (lt .PageNumber
 		$.Paginator.PageNumber) }} {{ $.Scratch.Set "hasPrevDots" true }}
 		<li>
-			<a href="{{ .URL }}"
-				><em class="fa fa-arrow-left" aria-hidden="true"></em
-			></a>
+			<a href="{{ .URL }}"><em class="fa fa-arrow-left" aria-hidden="true"></em></a>
 		</li>
 		{{ else if and (not ($.Scratch.Get "hasNextDots")) (gt .PageNumber
 		$.Paginator.PageNumber) }} {{ $.Scratch.Set "hasNextDots" true }}
 		<li>
-			<a href="{{ .URL }}"
-				><em class="fa fa-arrow-right" aria-hidden="true"></em
-			></a>
+			<a href="{{ .URL }}"><em class="fa fa-arrow-right" aria-hidden="true"></em></a>
 		</li>
 		{{ end }} {{ end }} {{ end }}
 	</ul>
