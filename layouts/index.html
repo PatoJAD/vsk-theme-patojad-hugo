@@ -14,9 +14,12 @@
 
 {{- partial "generic/services.html" . -}}
 
-{{if .Site.Params.team.enabled}}
+{{ if .Site.Params.team.enabled }}
 {{- partial "generic/team.html" . -}}
 {{ end }}
+
+{{ if .Site.Params.community.enabled }}
 {{- partial "generic/community.html" . -}}
+{{ end }}
 
 {{ end }}
