@@ -97,8 +97,8 @@
 						<ul class="d-flex">
 							{{ range .Site.Params.footer.social }}
 							<li>
-								<a href="{{ .url }}" alt="{{ .name }}" title="{{ .name }}" class="donate-link"
-									rel="noopener" target="_blank">
+								<a href="{{ .url }}" alt="{{ .name }}" aria-label="{{ .name }}" title="{{ .name }}"
+									class="donate-link" rel="noopener" target="_blank">
 									{{ partial "helper/icon" .params.icon }}
 								</a>
 							</li>
@@ -113,7 +113,7 @@
 							animation-name: fadeInUp;
 						">
 						Diseño creado por
-						<a href="https://vasak.net.ar" rel="nofollow">Vasak Group</a>
+						<a href="https://vasak.net.ar" rel="nofollow" aria-label="Got to Vasak Group">Vasak Group</a>
 					</p>
 				</div>
 			</div>
@@ -121,7 +121,7 @@
 	</div>
 </footer>
 
-<a href="#" class="scroll-top">
+<a href="#" class="scroll-top" alt="Scroll to Top" aria-label="Scroll To Top">
 	<em class="fa fa-arrow-up" aria-hidden="true"></em>
 </a>
 

@@ -11,7 +11,7 @@
 
               {{ range .Site.Params.friendsSite.main }}
               <div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-                <a href="{{ .url }}" target="_blank" rel="noopener">
+                <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .name }}">
                   <img class="img-fluid client-logo-img" src="{{ .image }}" alt="{{ .name }}" title="{{ .name }}">
                 </a>
               </div>

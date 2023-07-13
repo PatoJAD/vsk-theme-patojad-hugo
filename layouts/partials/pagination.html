@@ -4,22 +4,25 @@
 		{{ $.Scratch.Set "hasPrevDots" false }} {{ $.Scratch.Set "hasNextDots"
 		false }} {{ range .Paginator.Pagers }} {{ if eq . $.Paginator }}
 		<li>
-			<a href="#" class="active">
+			<a href="#" class="active" alt="This Page" aria-label="This Page">
 				{{- .PageNumber -}}
 			</a>
 		</li>
 		{{ else if or (or (eq . $.Paginator.First) (eq . $.Paginator.Prev)) (or
 		(eq . $.Paginator.Next) (eq . $.Paginator.Last )) }}
-		<li><a href="{{ .URL }}"> {{- .PageNumber -}} </a></li>
+		<li><a href="{{ .URL }}" alt="Got to Page {{- .PageNumber -}}" aria-label="Got to Page {{- .PageNumber -}}"> {{-
+				.PageNumber -}} </a></li>
 		{{ else }} {{ if and (not ($.Scratch.Get "hasPrevDots")) (lt .PageNumber
 		$.Paginator.PageNumber) }} {{ $.Scratch.Set "hasPrevDots" true }}
 		<li>
-			<a href="{{ .URL }}"><em class="fa fa-arrow-left" aria-hidden="true"></em></a>
+			<a href="{{ .URL }}" alt="Prev 2 pages" aria-label="Prev 2 pages"><em class="fa fa-arrow-left"
+					aria-hidden="true"></em></a>
 		</li>
 		{{ else if and (not ($.Scratch.Get "hasNextDots")) (gt .PageNumber
 		$.Paginator.PageNumber) }} {{ $.Scratch.Set "hasNextDots" true }}
 		<li>
-			<a href="{{ .URL }}"><em class="fa fa-arrow-right" aria-hidden="true"></em></a>
+			<a href="{{ .URL }}" alt="Next 2 pages" aria-label="Next 2 pages"><em class="fa fa-arrow-right"
+					aria-hidden="true"></em></a>
 		</li>
 		{{ end }} {{ end }} {{ end }}
 	</ul>

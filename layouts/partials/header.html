@@ -3,74 +3,36 @@
 		<div class="row align-items-center">
 			<div class="col-lg-12">
 				<nav class="navbar navbar-expand-lg">
-					<a class="navbar-brand" href="/">
+					<a class="navbar-brand" href="/" alt="Home" aria-label="Go To Home">
 						{{- partial "logo.html" "54px" -}}
 					</a>
-					<button
-						class="navbar-toggler ms-auto me-auto"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent"
-						aria-expanded="false"
-						aria-label="Toggle navigation">
+					<button class="navbar-toggler ms-auto me-auto" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
 						{{ partial "helper/icon" "menu" }}
 					</button>
-					<div
-						class="collapse navbar-collapse sub-menu-bar"
-						id="navbarSupportedContent">
+					<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
 						<ul id="nav" class="navbar-nav ms-auto me-auto">
 							{{ range .Site.Menus.main }} {{if eq
 							.Params.havechildren true }}
 							<li class="nav-item">
-								<a
-									class="page-scroll dd-menu collapsed"
-									href="javascript:void(0)"
-									data-bs-toggle="collapse"
-									data-bs-target="#{{- .Name -}}"
-									aria-controls="navbarSupportedContent"
-									aria-expanded="false"
-									aria-label="Toggle navigation"
-									>{{- .Name -}}</a
-								>
-								<ul
-									class="sub-menu collapse"
-									id="{{- .Name -}}">
+								<a class="page-scroll dd-menu collapsed" href="javascript:void(0)"
+									data-bs-toggle="collapse" data-bs-target="#{{- .Name -}}"
+									aria-controls="navbarSupportedContent" aria-expanded="false"
+									aria-label="Toggle navigation">{{- .Name -}}</a>
+								<ul class="sub-menu collapse" id="{{- .Name -}}">
 									{{ range .Params.submenu }}
 									<li class="nav-item">
-										<a
-											title="{{- .name -}}"
-											href="{{ .url | relLangURL }}"
-											{{
-											if
-											eq
-											.newTab
-											true
-											}}target="_blank"
-											{{
-											end
-											}}
-											>{{- .name -}}</a
-										>
+										<a title="{{- .name -}}" href="{{ .url | relLangURL }}" {{ if eq .newTab true
+											}}target="_blank" {{ end }}>{{- .name -}}</a>
 									</li>
 									{{end}}
 								</ul>
 							</li>
 							{{else}}
 							<li class="nav-item">
-								<a
-									class="page-scroll"
-									title="{{- .Name -}}"
-									href="{{ .URL | relLangURL }}"
-									{{
-									if
-									eq
-									.Params.newtab
-									true
-									}}target="_blank"
-									{{
-									end
-									}}>
+								<a class="page-scroll" title="{{- .Name -}}" href="{{ .URL | relLangURL }}" {{ if eq
+									.Params.newtab true }}target="_blank" {{ end }}>
 									<span>{{- .Name -}}</span>
 								</a>
 							</li>

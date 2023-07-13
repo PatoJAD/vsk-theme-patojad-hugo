@@ -2,7 +2,8 @@
 	<h4 class="text-center">{{ .Site.Params.donate.title }}</h4>
 	<p class="text-center donate">
 		{{ range .Site.Params.donate.main }}
-		<a href="{{ .url }}" alt="{{ .name }}" class="donate-link" rel="noopener" target="_blank">
+		<a href="{{ .url }}" alt="{{ .name }}" aria-label="{{ .name }}" class="donate-link" rel="noopener"
+			target="_blank">
 			{{ partial "helper/icon" .params.icon }}
 		</a>
 		{{ end }}
