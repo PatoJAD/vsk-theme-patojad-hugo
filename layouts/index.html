@@ -8,12 +8,15 @@
 
 {{- partial "post/recents.html" . -}}
 
-{{if .Site.Params.friendsSite.enabled}}
+{{ if .Site.Params.friendsSite.enabled }}
 {{- partial "generic/friendssite.html" . -}}
-{{end}}
+{{ end }}
 
 {{- partial "generic/services.html" . -}}
+
+{{if .Site.Params.team.enabled}}
 {{- partial "generic/team.html" . -}}
+{{ end }}
 {{- partial "generic/community.html" . -}}
 
 {{ end }}
