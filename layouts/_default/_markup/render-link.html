@@ -1,7 +1,10 @@
 <a href="{{ .Destination | safeURL }}" {{ with .Title}} title="{{ . }}" {{ end }}{{ if strings.HasPrefix
     .Destination "http" }} target="_blank" rel="noopener noreferrer" {{ end }}>
     {{ if strings.HasPrefix .Destination "https://github" }}<i class="fa fa-github"></i>&nbsp;
+    {{ else if strings.HasPrefix .Destination "https://gist.github" }}<i class="fa fa-github"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://gitlab" }}<i class="fa fa-gitlab"></i>&nbsp;
+    {{ else if strings.HasPrefix .Destination "https://t.me" }}<i class="fa fa-paper-plane"></i>&nbsp;
+    {{ else if strings.HasPrefix .Destination "https://steam" }}<i class="fa fa-steam"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://" }}<i class="fa fa-external-link"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "http://" }}<i class="fa fa-external-link"></i>&nbsp;
     {{ end }}
