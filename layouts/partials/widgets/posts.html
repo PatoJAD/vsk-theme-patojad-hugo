@@ -4,10 +4,10 @@
 		{{ range first 3 .Site.RegularPages.ByDate.Reverse }}
 		<div class="recent-blog mb-30">
 			<div class="recent-blog-img">
-				<img
-					src="{{ .Params.img }}"
-					alt="{{ .Title }}"
-					title="{{ .Title }}" />
+				{{ with resources.GetRemote (.Params.img) }}
+				{{ $thumb := .Resize "100x" }}
+				<img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" />
+				{{ end }}
 			</div>
 			<div class="recent-blog-content">
 				<h5><a href="{{ .RelPermalink }}">{{ .Title }}</a></h5>
