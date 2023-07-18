@@ -21,7 +21,10 @@
         <div class="single-team text-center mb-40 wow fadeInUp" data-wow-delay=".2s"
           style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
           <div class="team-img">
-            <img src="{{ .image }}" alt="{{ .name }}" title="{{ .name }}" aria-label="{{ .name }}" />
+            {{ with resources.GetRemote .image }}
+            {{ $thumb := .Resize "426x" }}
+            <img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" aria-label="{{ .Title }}" />
+            {{end}}
           </div>
           <div class="team-info">
             <h4>{{ .name }}</h4>
