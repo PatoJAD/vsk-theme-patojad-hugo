@@ -5,7 +5,12 @@
 			animation-name: fadeInUp;
 		" aria-hidden="true" tabindex="-1">
     <div class="blog-img">
-      <a href="{{ .RelPermalink }}"><img src="{{ .Params.img }}" alt="{{ .Title }}" title="{{ .Title }}" /></a>
+      <a href="{{ .RelPermalink }}">
+        {{ with resources.GetRemote (.Params.img) }}
+        {{ $thumb := .Resize "500x" }}
+        <img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" />
+        {{ end }}
+      </a>
       <span class="date-meta">
         {{ $formattedDate := .Date.Format "Friday, March 3, 2006" }}
         {{ $monthNumber := .Date.Month }} {{ $dayNumber := .Date.Weekday }}
