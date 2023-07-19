@@ -6,7 +6,7 @@
 			<div class="recent-blog-img">
 				{{ with resources.GetRemote (.Params.img) }}
 				{{ $thumb := .Resize "100x" }}
-				<img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" />
+				<img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" loading="lazy" />
 				{{ end }}
 			</div>
 			<div class="recent-blog-content">

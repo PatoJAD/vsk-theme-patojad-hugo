@@ -13,7 +13,7 @@
 							animation-name: fadeInUp;
 						">
 						<div class="blog-img blog-img-2">
-							<img src="{{ .Params.img }}" alt="{{ .Title }}" title="{{ .Title }}" />
+							<img src="{{ .Params.img }}" alt="{{ .Title }}" title="{{ .Title }}" loading="lazy" />
 						</div>
 						<div class="blog-content">
 							<div class="head-info row">
@@ -82,8 +82,8 @@
 									animation-name: fadeInUp;
 								">
 								<div class="team-img">
-									<img src="{{ .Params.photo }}" alt="{{ .Params.name }}"
-										title="{{ .Params.name }}" />
+									<img src="{{ .Params.photo }}" alt="{{ .Params.name }}" title="{{ .Params.name }}"
+										loading="lazy" />
 								</div>
 								<div class="team-info">
 									<h4>{{ .Params.name }}</h4>

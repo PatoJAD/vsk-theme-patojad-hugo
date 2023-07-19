@@ -13,13 +13,13 @@
         {{ errorf "%s" . }}
         {{ else }}
         {{ $thumb := .Resize "500x" }}
-        <img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" />
+        <img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" loading="lazy" />
         {{ end }}
         {{ else }}
         {{ errorf "Unable to get remote image %s" . }}
         {{ $img := resources.GetRemote "https://i.postimg.cc/0yN3Zrkd/imagenotfound.webp" }}
         {{ $thumb := $img.Resize "500x" }}
-        <img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" />
+        <img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" loading="lazy" />
         {{ end }}
         {{ end }}
 

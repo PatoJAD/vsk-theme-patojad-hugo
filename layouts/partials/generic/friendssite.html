@@ -13,12 +13,13 @@
               <div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
                 <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .name }}">
                   {{if hasSuffix .image ".svg"}}
-                  <img class="img-fluid client-logo-img" src="{{ .image }}" alt="{{ .name }}" title="{{ .name }}">
+                  <img class="img-fluid client-logo-img" src="{{ .image }}" alt="{{ .name }}" title="{{ .name }}"
+                    loading="lazy">
                   {{ else }}
                   {{ with resources.GetRemote .image }}
                   {{ $thumb := .Resize "200x" }}
                   <img class="img-fluid client-logo-img" src="{{ $thumb.Permalink }}" alt="{{ .Title }}"
-                    title="{{ .Title }}">
+                    title="{{ .Title }}" loading="lazy">
                   {{end}}
                   {{ end }}
                 </a>

@@ -23,7 +23,8 @@
           <div class="team-img">
             {{ with resources.GetRemote .image }}
             {{ $thumb := .Resize "426x" }}
-            <img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" aria-label="{{ .Title }}" />
+            <img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" aria-label="{{ .Title }}"
+              loading="lazy" />
             {{end}}
           </div>
           <div class="team-info">

@@ -34,7 +34,7 @@
                     if (!caption) caption = '';
                     var permalink = object.permalink.replace(/\/$/, '');
                     var media_type = object.media_type.toLowerCase();
-                    document.getElementById('instafeed').innerHTML = document.getElementById('instafeed').innerHTML + "<li style='background-image: url(" + image_small + ")' class='" + media_type + "'><a href='" + permalink + "' target='_blank' title='" + caption + "'><img src='" + image_small + "' alt='" + caption + "' /></a></li>";
+                    document.getElementById('instafeed').innerHTML = document.getElementById('instafeed').innerHTML + "<li style='background-image: url(" + image_small + ")' class='" + media_type + "'><a href='" + permalink + "' target='_blank' title='" + caption + "'><img src='" + image_small + "' alt='" + caption + "' loading='lazy' /></a></li>";
                 }
             });
         } else {
