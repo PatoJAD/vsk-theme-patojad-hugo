@@ -10,4 +10,4 @@
 
 {{ $allcss := slice $cssbootstrap $animate $tinyslider $style | resources.Concat "/css/vendor.css" | minify
 | fingerprint "sha512" }}
-<link rel="stylesheet" href="{{ $allcss.RelPermalink }}" integrity="{{ $allcss.Data.Integrity }}" />
+<link rel="stylesheet" href="{{ $allcss.RelPermalink }}" />
