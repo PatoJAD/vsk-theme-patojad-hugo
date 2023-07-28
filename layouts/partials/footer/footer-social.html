@@ -1,0 +1,21 @@
+<div class="footer-social-links">
+    <ul class="d-flex">
+        {{ range .Site.Params.footer.social }}
+        {{ if strings.HasPrefix .params.icon "fa fa" }}
+        <li>
+            <a href="{{ .url }}" alt="{{ .name }}" aria-label="{{ .name }}" title="{{ .name }}" class="donate-link"
+                rel="noopener" target="_blank">
+                <em class="{{ .params.icon }}"></em>
+            </a>
+        </li>
+        {{ else }}
+        <li>
+            <a href="{{ .url }}" alt="{{ .name }}" aria-label="{{ .name }}" title="{{ .name }}" class="donate-link"
+                rel="noopener" target="_blank">
+                {{ partial "helper/icon" .params.icon }}
+            </a>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</div>
