@@ -74,7 +74,6 @@
 					"authors") ".Params.name" . }}
 
 					<div class="comment-form-wrapper ms-0 row team-section" style="margin-bottom: 50px">
-						<h4 class="mb-40">Autor</h4>
 						<div class="col-xl-4 col-lg-4 col-md-6">
 							<div class="single-team text-center mb-40 wow fadeInUp" data-wow-delay=".2s" style="
 									visibility: visible;
@@ -92,7 +91,8 @@
 							</div>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-6">
-							{{ .Content }}
+							<h4 class="mb-40 text-center">Autor</h4>
+							<p>{{ .Content }}</p>
 						</div>
 					</div>
 					{{ end }} {{ end }}
