@@ -18,11 +18,3 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 }
-
-img {
-	view-timeline-name: --revealing-img;
-	animation-name: show;
-	animation-fill-mode: both;
-	animation-timeline: --revealing-img;
-	animation-range: entry 35% cover 60%;
-}
