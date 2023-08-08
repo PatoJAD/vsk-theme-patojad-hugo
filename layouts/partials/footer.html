@@ -93,7 +93,7 @@
 		<div class="copyright-area">
 			<div class="row align-items-center">
 				<div class="col-lg-6 col-md-12">
-					{{- partial "footer/footer-social.html" . -}}
+					{{- partialCached "footer/footer-social.html" . -}}
 				</div>
 				<div class="col-lg-6 col-md-12">
 					<p class="wow fadeInUp" data-wow-delay=".3s" style="
@@ -114,4 +114,4 @@
 	<em class="fa fa-arrow-up" aria-hidden="true"></em>
 </a>
 
-{{ partial "footer/scripts.html" }}
+{{ partialCached "footer/scripts.html" . }}
