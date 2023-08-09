@@ -6,6 +6,8 @@
     {{ else if strings.HasPrefix .Destination "https://t.me" }}<i class="fa fa-paper-plane"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://steam" }}<i class="fa fa-steam"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://patojad" }}<i class="fa fa-reply"></i>&nbsp;
+    {{ else if strings.HasPrefix .Destination "http://patojad" }}<i class="fa fa-reply"></i>&nbsp;
+    {{ else if strings.HasPrefix .Destination "/" }}<i class="fa fa-reply"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://" }}<i class="fa fa-external-link"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "http://" }}<i class="fa fa-external-link"></i>&nbsp;
     {{ end }}
