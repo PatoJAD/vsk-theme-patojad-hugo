@@ -8,9 +8,11 @@
       <a href="{{ .RelPermalink }}">
 
         {{ with .Params.img }}
+        {{ $imgurl := . }}
         {{ with resources.GetRemote . }}
         {{ with .Err }}
-        {{ errorf "%s" . }}
+        {{ errorf "Fail to get Image: %s" . }}
+        {{ warnf $imgurl }}
         {{ else }}
         {{ $thumb := .Resize "500x" }}
         <img src="{{ $thumb.Permalink }}" alt="{{ .Title }}" title="{{ .Title }}" loading="lazy" />
