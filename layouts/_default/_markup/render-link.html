@@ -7,6 +7,8 @@
     {{ else if strings.HasPrefix .Destination "https://steam" }}<i class="fa fa-steam"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://twitter" }}<i class="fa fa-twitter"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://instagram" }}<i class="fa fa-instagram"></i>&nbsp;
+    {{ else if strings.HasPrefix .Destination "https://facebook" }}<i class="fa fa-facebook"></i>&nbsp;
+    {{ else if strings.HasPrefix .Destination "https://linkedin" }}<i class="fa fa-linkedin"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://youtube" }}<i class="fa fa-youtube"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://twitch" }}<i class="fa fa-twitch"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://mastodon" }}<i class="fa fa-mastodon"></i>&nbsp;
