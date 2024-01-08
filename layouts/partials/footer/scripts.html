@@ -1,38 +1,14 @@
 {{ $bootstrap := resources.GetRemote
-"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" }}
+"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" }}
 {{ $countup := resources.Get "/js/count-up.min.js" }}
-{{ $wow := resources.Get "/js/wow.min.js" }}
 {{ $theme := resources.Get "/js/theme.js" }}
 
 {{- $opts := dict "minify" hugo.IsProduction -}}
 {{- $main := resources.Get "/ts/main.ts" | js.Build $opts -}}
 
-{{ $fullscript := slice $bootstrap $countup $wow $theme $main | resources.Concat "/js/vendor.js" | minify | fingerprint
+{{ $fullscript := slice $bootstrap $countup $theme $main | resources.Concat "/js/vendor.js" | minify | fingerprint
 "sha512" }}
 <script async src="{{ $fullscript.RelPermalink }}"></script>
-
-<!-- Ads Google -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2459752565912421"
-	crossorigin="anonymous"></script>
-<script async src="https://fundingchoicesmessages.google.com/i/pub-2459752565912421?ers=1" nonce="pYYONInuOnai5uqh1m68Ow"></script>
-<script nonce="pYYONInuOnai5uqh1m68Ow">
-	(function() {
-		function signalGooglefcPresent() {
-			if (!window.frames['googlefcPresent']) {
-				if (document.body) {
-					const iframe = document.createElement('iframe'); 
-					iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; 
-					iframe.style.display = 'none'; 
-					iframe.name = 'googlefcPresent'; 
-					document.body.appendChild(iframe);
-				} else {
-					setTimeout(signalGooglefcPresent, 0);
-				}
-			}
-		}
-		signalGooglefcPresent();
-	})();
-</script>
 
 <!-- Metricool -->
 <script>
@@ -59,14 +35,4 @@
       appId: "52e5b1be-b7d6-4099-af80-fbd6ba25970b",
     });
   });
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-21JN682W8P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-21JN682W8P');
 </script>
