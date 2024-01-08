@@ -5,7 +5,7 @@
   <form action="{{ $searchPage.RelPermalink }}" class="search-form" {{ with .OutputFormats.Get "json"
     -}}data-json="{{ .Permalink }}" {{- end }}>
     <input type="text" name="keyword" required placeholder="Buscar...">
-    <button type="submit" name="search">{{ partial "helper/icon" "search" }}</button>
+    <button type="submit" name="search">{{ partial "helper/icon" "fas fa-magnifying-glass" }}</button>
   </form>
 </div>
 {{- else -}}
