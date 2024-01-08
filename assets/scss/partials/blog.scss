@@ -460,14 +460,11 @@
         background: var(--bg-site-g);
         border-radius: 50%;
         padding: 8px;
-
-        svg {
-          width: 24px;
-          height: 24px;
-        }
+				font-size: 24px;
 
         &:hover {
           background: var(--site-gradient);
+					color: var(--bg-site-g);
         }
       }
     }
