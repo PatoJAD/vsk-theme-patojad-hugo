@@ -4,7 +4,7 @@
         <li>
             <a href="{{ .url }}" alt="{{ .name }}" aria-label="{{ .name }}" title="{{ .name }}" class="donate-link"
                 rel="noopener" target="_blank">
-                {{ if strings.HasPrefix .params.icon "fa fa" }}
+                {{ if strings.HasPrefix .params.icon "fa" }}
                 <em class="{{ .params.icon }}"></em>
                 {{ else }}
                 {{ partial "helper/icon" .params.icon }}
