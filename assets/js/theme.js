@@ -4,9 +4,6 @@ navbarToggler.addEventListener('click', function () {
 	navbarToggler.classList.toggle('active');
 });
 
-const wow = new WOW();
-wow.init();
-
 const cu = new counterUp({
 	start: 0,
 	duration: 2000,
