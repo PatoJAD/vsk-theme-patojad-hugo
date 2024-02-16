@@ -12,9 +12,12 @@
     {{ else if strings.HasPrefix .Destination "https://youtube" }}<i class="fab fa-youtube"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://twitch" }}<i class="fab fa-twitch"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://mastodon" }}<i class="fab fa-mastodon"></i>&nbsp;
+    {{ else if strings.HasPrefix .Destination "https://reddit" }}<i class="fab fa-reddit-alien"></i>&nbsp;
+    {{ else if strings.HasPrefix .Destination "https://www.reddit" }}<i class="fab fa-reddit-alien"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://patojad" }}<i class="fas fa-link"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "http://patojad" }}<i class="fas fa-link"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "/" }}<i class="fas fa-link"></i>&nbsp;
+    {{ else if strings.HasPrefix .Destination "mailto:" }}<i class="fas fa-envelope"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "https://" }}<i class="fas fa-up-right-from-square"></i>&nbsp;
     {{ else if strings.HasPrefix .Destination "http://" }}<i class="fas fa-up-right-from-square"></i>&nbsp;
     {{ end }}
