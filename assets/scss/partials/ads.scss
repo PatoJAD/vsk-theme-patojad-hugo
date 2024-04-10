@@ -1,0 +1,13 @@
+.vpsuniverse{
+  margin: 30px;
+  padding: 25px;
+  border-radius: var(--site-radius);
+  background: var(--site-gradient);
+  color: white;
+
+  a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
